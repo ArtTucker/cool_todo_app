@@ -1,40 +1,40 @@
-#Outline of Todo App
+# Outline of Todo App
 
-##Models
-###User
+## Models
+### User
 * email:string
 * password_digest:string
 * first_name:string
 * last_name:string
 * **has_many** Todos
 
-###Todo
+### Todo
 * content:string
 * complete:boolean
 * created_at:datetime
 * **belongs_to** User
 
-##Controllers
-###Site
+## Controllers
+### Site
 * index
 * signup
 * login
 * contact
 * about
 
-###User
+### User
 * index
 * create
 
-###Todo
+### Todo
 * index
 * create
 * edit
 * destroy
 * show
 
-##Routes
-###GET
+## Routes
+### GET
 * '/' -> `site#index`
 * '/signup' -> `site#signup`
 * '/login' -> `site#login`
@@ -46,12 +46,12 @@
 * '/todos/new' -> `todo#new`
 * '/todos/edit' -> `todo#edit`
 
-###POST
+### POST
 * '/users' -> `user#create`
 * '/todos' -> `todo#create`
 
-###PATCH or PUT
+### PATCH or PUT
 * '/todos/:id' -> `todo#edit`
 
-###DELETE
+### DELETE
 * '/todos/:id' -> `todo#delete`
